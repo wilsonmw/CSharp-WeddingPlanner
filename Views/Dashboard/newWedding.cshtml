@@ -1,0 +1,22 @@
+@model WeddingPlanner.Models.WeddingViewModel
+
+<h1>Create a New Wedding</h1>
+
+<form action='/createNew' method="POST">
+<span asp-validation-for="Name1"></span><br>
+    Wedder One: <input type='text' name='Name1'><br>
+    <br>
+    <span asp-validation-for="Name2"></span><br>
+    Wedder Two: <input type='text' name='Name2'><br>
+    <br>
+    <span asp-validation-for="Date"></span><br>
+    Date: <input type='date' name='Date'><br>
+    <br>
+    <span asp-validation-for="Address"></span><br>
+    Address: <input type='text' name = 'Address'><br>
+    <br>
+    <input type='submit' value='Create'>
+</form>
+
+<a href='/dashboard'>Dashboard</a>
+<a href='/logout'>Logout</a>

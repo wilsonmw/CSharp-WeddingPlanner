@@ -1,0 +1,41 @@
+<h1>Welcome to the Wedding Planner</h1>
+<a href="/logout" class="logout">Logout</a>
+
+<table>
+    <tr>
+        <th>Wedding</th>
+        <th>Date</th>
+        <th>Guests</th>
+        <th>Action</th>
+    </tr>
+    @{foreach (var wedding in @ViewBag.allWeddings)
+    {
+    bool positive = false;
+        <tr class='row'>
+            <td><a href="/show/@wedding.WeddingID">@wedding.Name1 and @wedding.Name2</a></td>
+            <td>@wedding.Date.ToString("MM/d/yyyy")</td>
+            <td>@wedding.GuestCount</td>
+            @if(@wedding.User.UserID == @ViewBag.userID)
+            {
+                <td><a href="/delete/@wedding.WeddingID">Delete</a></td>
+            }
+            else{
+                @foreach(var guest in @wedding.Guests){
+                    if(guest.UserID == @ViewBag.userID){
+                        positive = true;
+                    }
+                }
+                if(@positive == true){
+                        <td><a href="/un-rsvp/@wedding.WeddingID">Un-RSVP</a></td>
+                }
+                else{
+                        <td><a href="/rsvp/@wedding.WeddingID">RSVP</a></td>
+                    }
+                    
+            }      
+        </tr>
+    }
+    }
+</table>
+
+<a href="/newWedding" id="newWedding">Create a New Wedding</a>

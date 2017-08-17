@@ -1,0 +1,16 @@
+
+<div class="details">
+    <h2>Wedding Details:</h2>
+    <h3 class="variableText">@ViewBag.currentWedding.Name1 and @ViewBag.currentWedding.Name2</h3>
+    <h3>are getting married on</h3>
+    <h3 class="variableText">@ViewBag.currentWedding.Date.ToString("MM/d/yyyy")</h3>
+    <h3>at</h3>
+    <h3 class="variableText">@ViewBag.currentWedding.Address</h3>
+    <h3>Current guests attending:</h3>
+
+    @{foreach (var guest in @ViewBag.guests){
+        <p>@guest.User.FirstName @guest.User.LastName</p>
+    }}
+
+    <a href = "/dashboard">Return to Dashboard</a>
+</div>

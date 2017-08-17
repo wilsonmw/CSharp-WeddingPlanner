@@ -1,0 +1,82 @@
+/*Write all of your CSS here*/
+span{
+    color:red;
+}
+
+.regPage{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    margin-left: 10%;
+}
+h2{
+    font-size: 1.7em;
+}
+
+h3{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h1{
+    margin-left: 16%;
+}
+
+.mainPart{
+    background-color: lightblue;
+}
+
+.button{
+    border-radius: 5px;
+    background-color: gray;
+    color: whitesmoke;
+    font-size: 1em;
+    box-shadow: 3px 3px 0px 0px;
+}
+
+.details{
+    margin-left: 16%;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3%;
+    background-color: pink;
+}
+
+.details.p{
+    text-align: center;
+}
+
+.variableText{
+    color: purple;
+}
+body{
+    background-color: lightblue;
+}
+
+table{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: pink;
+    margin-left: 18%;
+    border-collapse: collapse;
+}
+a{
+    color: darkgreen;
+}
+#newWedding{
+    margin-left: 23%;
+}
+
+.logout{
+    margin-left: 50%;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 10px;
+}

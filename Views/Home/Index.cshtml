@@ -1,0 +1,54 @@
+@model WeddingPlanner.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="mainPart">
+<h1>Log In or Register for Wedding Planner</h1>
+<div class="regPage">    
+    <h3>Register</h3>
+    <p style="color: red">@ViewBag.existsError</p>
+    <form asp-controller="Home" asp-action="Register" method="POST">
+        
+        <span asp-validation-for="FirstName"></span><br>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName"><br>
+        <br>
+
+        <span asp-validation-for="LastName"></span><br>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName"><br>
+        <br>
+
+        <span asp-validation-for="Email"></span><br>
+        <label asp-for="Email"></label>
+        <input asp-for="Email"><br>
+        <br>
+
+        <span asp-validation-for="Password"></span><br>
+        <label asp-for="Password"></label>
+        <input type="password" asp-for="Password"><br>
+        <br>
+
+        <span asp-validation-for="PWConfirm"></span><br>
+        <label asp-for="PWConfirm"></label>
+        <input type = "password" asp-for="PWConfirm"><br>
+        <br>
+
+        <input type="submit" value="Register" class="button">
+    </form>
+    <br>
+</div>
+
+<div class="regPage">
+    <h3>Login</h3>
+    <p style="color: red">@ViewBag.loginError</p>
+    <form asp-controller="Home" asp-action="Login" method="POST">
+        Email: <input type='text' name='Email'><br>
+        <br>
+        Password: <input type='text' name='Password'><br>
+        <br>
+        <input type="submit" value="Login" class="button">
+    </form>
+</div>
+</div>
